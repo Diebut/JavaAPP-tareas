@@ -12,8 +12,10 @@ function guardarTarea(e){
 
       };
       //alamceno dentro del localStorage en consola y application y adentro estan los datos almacenados
-      localStorage.setItem('tareas', tarea);
-      
-  
+      //localStorage.setItem('tareas', JSON.stringify(tareas));
+
+      console.log(localStorage.getItem('tareas')) //obteniendo todos los datos por consola
+
+   
     e.preventDefault();
 }
