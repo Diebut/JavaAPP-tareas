@@ -32,10 +32,22 @@ function getTareas(params) {
     let vistaTareas = document.getElementById('task');// ID del index.html
 
     vistaTareas.innerHTML = ''; //limpiarlo al contenido
+    let title = tareas[i].title;
+    let description = tareas[i].description;
 
     for (let i = 0; i < tareas.length; i++) { //recorriendo las tareas q tenemos en el localStorage
-        console.log(tareas[i])
+        //cada tarea q recorra +- se va guardando dentro del vistaTarea y muestra en pantalla.
+        vistaTareas.innerHTML += `<div class="card mb-3"> 
+        <div class="card-body">
+            <p>${title} - ${description}</p>
+            <a class="btn btn-danger" onclick="deleteTareas('${title}')">
+                DELETE
+            </a>
+        </div>
+    </div>`
+    
+   }
         
-    }
+    
 }
 getTareas();
