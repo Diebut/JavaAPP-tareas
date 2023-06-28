@@ -16,6 +16,32 @@
         </div>
     </nav>
 
-    
+     <!--MAIN DEL CONTENIDO-->
+     <div class="container"> <!--contenido -->
+        <div class="row pt-5"> <!--fila -->
+            <div class="col-md-4"> <!--columan izquierda -->
+                <div class="card"> <!--recuadro de tarjeta-->
+                    <div class="card-body"> <!--cuerpo de la tarjeta -->
+                        <form id="formTask"> <!--contenido del formulario-->
+                            <div class="form-group"> <!--agrupar un formulario -->
+                                <input type="text" id="title" placeholder="Agrega una tarea :D" class="form-control"> <!--texto-->
+                            </div>
+                            <div class="form-group pt-3">
+                                <textarea id="description" cols="80" rows="8" class="form-control" placeholder="Agregue una descripcion"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block">GUARDAR</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8"> <!--columan derecha -->
+                <div id="task">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
 </body>
 </html>
