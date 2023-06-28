@@ -11,6 +11,7 @@ function guardarTarea(e){
         description //description: description
 
       };
+      console.log(tarea)
     // if(localStorage.getItem('tareas') === null){
 
     //     let tareas =[];
