@@ -11,18 +11,9 @@ function guardarTarea(e){
         description //description: description
 
       };
-      console.log(tarea)
-    // if(localStorage.getItem('tareas') === null){
-
-    //     let tareas =[];
-    //     tareas.push(tarea);
-    //     localStorage.setItem('tareas', JSON.stringify(tareas));
-    // }else{
-    //     let tareas = JSON.parse(localStorage.getItem('tareas'));
-    //     tareas.push(tarea);
-    //     localStorage.setItem('tareas', JSON.stringify(tareas));
-    //    }
-    //    getTareas();
-    //    document.getElementById('formTask').reset(); // reseteo el formulario
+      //alamceno dentro del localStorage en consola y application y adentro estan los datos almacenados
+      localStorage.setItem('tareas', tarea);
+      
+  
     e.preventDefault();
 }
