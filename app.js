@@ -22,7 +22,7 @@ function guardarTarea(e){
         tareas.push(tarea);
         localStorage.setItem('tareas', JSON.stringify(tareas));
        }
-    
+       getTareas();
     e.preventDefault();
 }
 
@@ -32,10 +32,10 @@ function getTareas(params) {
     let vistaTareas = document.getElementById('task');// ID del index.html
 
     vistaTareas.innerHTML = ''; //limpiarlo al contenido
-    let title = tareas[i].title;
-    let description = tareas[i].description;
 
     for (let i = 0; i < tareas.length; i++) { //recorriendo las tareas q tenemos en el localStorage
+        let title = tareas[i].title;
+        let description = tareas[i].description;
         //cada tarea q recorra +- se va guardando dentro del vistaTarea y muestra en pantalla.
         vistaTareas.innerHTML += `<div class="card mb-3"> 
         <div class="card-body">
