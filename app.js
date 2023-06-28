@@ -25,3 +25,17 @@ function guardarTarea(e){
     
     e.preventDefault();
 }
+
+//creamos una funcion obtener tareas, hace una consulta por localStorage y una vez q obtenga los datos lo muestra por pantalla
+function getTareas(params) {
+    let tareas = JSON.parse(localStorage.getItem('tareas'));
+    let vistaTareas = document.getElementById('task');// ID del index.html
+
+    vistaTareas.innerHTML = ''; //limpiarlo al contenido
+
+    for (let i = 0; i < tareas.length; i++) { //recorriendo las tareas q tenemos en el localStorage
+        console.log(tareas[i])
+        
+    }
+}
+getTareas();
