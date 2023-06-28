@@ -50,4 +50,7 @@ function getTareas(params) {
         
     
 }
+function deleteTareas(){
+    
+}
 getTareas();
