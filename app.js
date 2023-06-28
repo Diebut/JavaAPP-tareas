@@ -11,11 +11,17 @@ function guardarTarea(e){
         description //description: description
 
       };
-      //alamceno dentro del localStorage en consola y application y adentro estan los datos almacenados
-      //localStorage.setItem('tareas', JSON.stringify(tareas));
+    // almaceno un arreglo y un objecto dentro localStorage
+    if(localStorage.getItem('tareas') === null){
 
-      console.log(localStorage.getItem('tareas')) //obteniendo todos los datos por consola
-
-   
+        let tareas =[];
+        tareas.push(tarea);
+        localStorage.setItem('tareas', JSON.stringify(tareas));
+    }else{
+        let tareas = JSON.parse(localStorage.getItem('tareas'));
+        tareas.push(tarea);
+        localStorage.setItem('tareas', JSON.stringify(tareas));
+       }
+    
     e.preventDefault();
 }
