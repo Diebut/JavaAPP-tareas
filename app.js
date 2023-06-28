@@ -3,16 +3,14 @@ document.getElementById('formTask').addEventListener('submit', guardarTarea);
 
 function guardarTarea(e){
     let title = document.getElementById('title').value
-
     let description = document.getElementById('description').value
 
-    console.log(title, description)
    
-    // const tarea ={
-    //     title, // title: title,
-    //     description //description: description
+     const tarea ={
+        title, // title: title,
+        description //description: description
 
-    // };
+      };
     // if(localStorage.getItem('tareas') === null){
 
     //     let tareas =[];
