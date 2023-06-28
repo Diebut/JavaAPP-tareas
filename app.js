@@ -51,6 +51,13 @@ function getTareas(params) {
     
 }
 function deleteTareas(){
-    
+    let tareas = JSON.parse(localStorage.getItem('tareas'));
+
+    for (let i = 0; i < tareas.length; i++) { //recorro las tareas en el localStorage
+        if (tareas[i].title == title) { // si existe
+            tareas.splice(i, 1); //splice se encarga de quitar un dato en q indice
+        }
+        
+    }
 }
 getTareas();
