@@ -23,6 +23,7 @@ function guardarTarea(e){
         localStorage.setItem('tareas', JSON.stringify(tareas));
        }
        getTareas();
+       document.getElementById('formTask').reset(); // reseteo el formulario
     e.preventDefault();
 }
 
@@ -50,7 +51,7 @@ function getTareas(params) {
         
     
 }
-function deleteTareas(){
+function deleteTareas(title){
     let tareas = JSON.parse(localStorage.getItem('tareas'));
 
     for (let i = 0; i < tareas.length; i++) { //recorro las tareas en el localStorage
@@ -59,5 +60,7 @@ function deleteTareas(){
         }
         
     }
+    localStorage.setItem('tareas', JSON.stringify(tareas)); //volver almacenarlo para verlo en la interfaz
+    getTareas();
 }
 getTareas();
